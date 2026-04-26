@@ -1,23 +1,19 @@
-class AIResponseEvaluator:
-
-    def __init__(self):
-        self.weights = {
-            "correctness": 0.35,
-            "reasoning": 0.25,
-            "clarity": 0.15,
-            "completeness": 0.15,
-            "instruction": 0.10
-        }
-
-    def score(self, r: dict):
-        return sum(r[k] * w for k, w in self.weights.items())
-
-
-def evaluate_ai_response(payload: dict):
-    evaluator = AIResponseEvaluator()
-    score = evaluator.score(payload)
-
-    return {
-        "score": round(score, 3),
-        "grade": "A" if score > 0.85 else "B" if score > 0.7 else "C"
+def evaluate_response(response: str):
+    result = {
+        "correctness": "unknown",
+        "reason": "",
+        "score": 0.5
     }
+
+    # Rule 1: Basic math validation example
+    if "5 + 3 * 2 = 16" in response:
+        result["correctness"] = "incorrect"
+        result["reason"] = "BODMAS rule violated"
+        result["score"] = 0.2
+
+    elif "5 + 3 * 2 = 11" in response:
+        result["correctness"] = "correct"
+        result["reason"] = "Correct application of BODMAS"
+        result["score"] = 1.0
+
+    return result
