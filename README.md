@@ -28,6 +28,16 @@ Output:
 - Python
 - FastAPI
 
+## System Architecture
+
+The platform is designed with modular components:
+
+- API Layer (FastAPI routes)
+- Evaluation Engine (response scoring logic)
+- Validation Engine (dataset quality checks)
+
+This structure reflects real-world AI systems and supports scalability and maintainability.
+
 ## Status
 
 Backend initialized — evaluation engine in progress
