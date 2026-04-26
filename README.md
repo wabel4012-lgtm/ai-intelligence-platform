@@ -5,17 +5,11 @@ This project is a production-level system for:
 - AI response evaluation  
 - Dataset validation  
 - Annotation and QA workflows  
-- Logical reasoning systems  
+- Analytical and reasoning-based processing  
 
-## Features
+## Tech Stack
+- Python
+- FastAPI
 
-- FastAPI backend  
-- AI scoring engine  
-- Dataset validation tools  
-- Streamlit dashboard  
-- Docker-ready setup  
-
-## How to Run
-
-pip install -r requirements.txt  
-uvicorn app.main:app --reload
+## Status
+Day 1: Backend structure initialized
