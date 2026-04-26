@@ -20,7 +20,9 @@ def evaluate_response(response: str):
         score += 0.2
         feedback.append("Clear answer format")
 
-    return {
-        "score": round(score, 2),
-        "feedback": feedback
-    }
+   return {
+    "correctness": "correct" if score > 0.7 else "incorrect",
+    "score": round(score, 2),
+    "confidence": "high" if score > 0.8 else "medium",
+    "reasoning": feedback
+}
