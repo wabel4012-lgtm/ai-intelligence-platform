@@ -19,3 +19,17 @@ def full_pipeline(data: dict):
         "evaluation": evaluation,
         "status": "processed"
     }
+
+from pydantic import BaseModel
+
+class EvaluateRequest(BaseModel):
+    response: str
+
+@router.post("/evaluate")
+def evaluate(data: EvaluateRequest):
+    return evaluate_response(data.response)
+
+try:
+    result = evaluate_response(response)
+except Exception as e:
+    return {"error": str(e)}
