@@ -82,6 +82,10 @@ This system simulates AI evaluation pipelines used in:
 
 It demonstrates how AI outputs can be evaluated, scored, and validated before deployment.
 
+### Full Pipeline
+POST /pipeline
+Processes input through evaluation workflow
+
 ## Status
 
 Backend initialized — evaluation engine in progress
