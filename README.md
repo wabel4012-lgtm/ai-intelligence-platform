@@ -2,14 +2,14 @@
 
 A production-level system for evaluating AI responses, validating datasets, and simulating annotation workflows.
 
-## 🚀 Core Features
+## Core Features
 
 - AI Response Evaluation (correctness, reasoning, clarity)
 - Dataset Validation (missing values, inconsistencies)
 - Annotation & QA Workflows
 - Analytical Reasoning Engine
 
-## 🧠 Example Use Case
+## Example Use Case
 
 Input:
 {
@@ -23,11 +23,11 @@ Output:
   "score": 0.3
 }
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - Python
 - FastAPI
 
-## 📌 Status
+## Status
 
 Backend initialized — evaluation engine in progress
