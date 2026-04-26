@@ -1,16 +1,33 @@
 # AI Intelligence Platform
 
-A production-level system for AI evaluation, dataset validation, and structured reasoning tasks.
+A production-level system for evaluating AI responses, validating datasets, and simulating annotation workflows.
 
-## Features
-- AI response evaluation  
-- Dataset validation  
-- Annotation workflows  
-- Analytical reasoning  
+## 🚀 Core Features
 
-## Tech Stack
-- Python  
-- FastAPI  
+- AI Response Evaluation (correctness, reasoning, clarity)
+- Dataset Validation (missing values, inconsistencies)
+- Annotation & QA Workflows
+- Analytical Reasoning Engine
 
-## Status
-Backend structure initialized and ready for feature expansion
+## 🧠 Example Use Case
+
+Input:
+{
+  "response": "5 + 3 * 2 = 16"
+}
+
+Output:
+{
+  "correctness": "incorrect",
+  "reason": "BODMAS rule violated",
+  "score": 0.3
+}
+
+## ⚙️ Tech Stack
+
+- Python
+- FastAPI
+
+## 📌 Status
+
+Backend initialized — evaluation engine in progress
