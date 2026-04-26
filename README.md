@@ -69,6 +69,19 @@ This platform simulates real-world AI evaluation systems used in:
 
 It demonstrates how structured evaluation, validation, and reasoning can improve AI output quality.
 
+pip install fastapi uvicorn
+uvicorn app.main:app --reload
+
+## Real-World Application
+
+This system simulates AI evaluation pipelines used in:
+
+- Data annotation platforms  
+- AI model testing systems  
+- Quality assurance workflows  
+
+It demonstrates how AI outputs can be evaluated, scored, and validated before deployment.
+
 ## Status
 
 Backend initialized — evaluation engine in progress
