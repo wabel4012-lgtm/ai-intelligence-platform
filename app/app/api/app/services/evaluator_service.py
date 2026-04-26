@@ -1,19 +1,26 @@
 def evaluate_response(response: str):
-    result = {
-        "correctness": "unknown",
-        "reason": "",
-        "score": 0.5
+    score = 0
+    feedback = []
+
+    # Correctness check
+    if "5 + 3 * 2 = 11" in response:
+        score += 0.5
+        feedback.append("Correct calculation")
+
+    else:
+        feedback.append("Incorrect calculation")
+
+    # Reasoning check
+    if "BODMAS" in response or "*" in response:
+        score += 0.3
+        feedback.append("Proper reasoning applied")
+
+    # Clarity check
+    if "=" in response:
+        score += 0.2
+        feedback.append("Clear answer format")
+
+    return {
+        "score": round(score, 2),
+        "feedback": feedback
     }
-
-    # Rule 1: Basic math validation example
-    if "5 + 3 * 2 = 16" in response:
-        result["correctness"] = "incorrect"
-        result["reason"] = "BODMAS rule violated"
-        result["score"] = 0.2
-
-    elif "5 + 3 * 2 = 11" in response:
-        result["correctness"] = "correct"
-        result["reason"] = "Correct application of BODMAS"
-        result["score"] = 1.0
-
-    return result
