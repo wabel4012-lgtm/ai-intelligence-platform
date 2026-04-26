@@ -8,12 +8,14 @@ def evaluate(data: dict):
     response = data.get("response", "")
     return evaluate_response(response)
 
-@router.post("/batch-evaluate")
-def batch_evaluate(data: list):
-    results = []
-
-    for item in data:
-        response = item.get("response", "")
-        results.append(evaluate_response(response))
-
-    return {"results": results}
+@router.post("/pipeline")
+def full_pipeline(data: dict):
+    response = data.get("response", "")
+    
+    evaluation = evaluate_response(response)
+    
+    return {
+        "input": response,
+        "evaluation": evaluation,
+        "status": "processed"
+    }
