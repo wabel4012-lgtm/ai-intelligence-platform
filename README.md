@@ -86,6 +86,17 @@ It demonstrates how AI outputs can be evaluated, scored, and validated before de
 POST /pipeline
 Processes input through evaluation workflow
 
+## End-to-End Pipeline
+
+This platform simulates a full AI evaluation workflow:
+
+1. Input is received  
+2. Response is evaluated (correctness, reasoning, clarity)  
+3. Dataset validation is performed  
+4. Structured output is returned  
+
+This reflects real-world AI data pipelines used in production systems.
+
 ## Status
 
 Backend initialized — evaluation engine in progress
