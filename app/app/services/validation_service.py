@@ -1,22 +1,11 @@
-import pandas as pd
+def validate_dataset(dataset):
+    issues = []
 
-class DatasetIntelligence:
-
-    def detect_nulls(self, df):
-        return df.isnull().mean().to_dict()
-
-    def detect_outliers(self, df, column):
-        q1 = df[column].quantile(0.25)
-        q3 = df[column].quantile(0.75)
-        iqr = q3 - q1
-        return df[(df[column] < q1 - 1.5 * iqr) | (df[column] > q3 + 1.5 * iqr)]
-
-def validate_dataset(payload: dict):
-    df = pd.DataFrame(payload["data"])
-
-    engine = DatasetIntelligence()
+    for i, item in enumerate(dataset):
+        if "input" not in item or "expected_output" not in item:
+            issues.append(f"Missing fields in item {i}")
 
     return {
-        "null_report": engine.detect_nulls(df),
-        "outliers": len(engine.detect_outliers(df, payload["column"]))
+        "valid": len(issues) == 0,
+        "issues": issues
     }
