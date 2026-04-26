@@ -38,6 +38,37 @@ The platform is designed with modular components:
 
 This structure reflects real-world AI systems and supports scalability and maintainability.
 
+## API Endpoints
+
+### Evaluate Response
+POST /evaluate
+
+### Batch Evaluation
+POST /batch-evaluate
+
+---
+
+## Example Output
+
+{
+  "score": 0.8,
+  "feedback": [
+    "Correct calculation",
+    "Proper reasoning applied",
+    "Clear answer format"
+  ]
+}
+
+## Purpose
+
+This platform simulates real-world AI evaluation systems used in:
+
+- AI model training
+- Data annotation pipelines
+- Quality assurance workflows
+
+It demonstrates how structured evaluation, validation, and reasoning can improve AI output quality.
+
 ## Status
 
 Backend initialized — evaluation engine in progress
