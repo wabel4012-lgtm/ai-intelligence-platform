@@ -33,7 +33,9 @@ This reflects real-world AI data pipelines used in production systems.
 {
   "response": "5 + 3 * 2 = 16"
 }
+```
 **Output:**
+```
 {
   "correctness": "incorrect",
   "score": 0.2,
@@ -44,16 +46,20 @@ This reflects real-world AI data pipelines used in production systems.
 ## API Endpoints
 
 Evaluate Response
+
 POST /evaluate
 
 Batch Evaluation
+
 POST /batch-evaluate
 
 Full Pipeline
+
 POST /pipeline
 
 ## Tech Stack
 Python
+
 FastAPI
 
 ## How to Run
@@ -67,7 +73,9 @@ uvicorn app.main:app --reload
 This system simulates AI evaluation pipelines used in:
 
 Data annotation platforms
+
 AI model testing
+
 Quality assurance workflows
 
 ## Status
