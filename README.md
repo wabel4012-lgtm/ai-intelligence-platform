@@ -34,8 +34,6 @@ This reflects real-world AI data pipelines used in production systems.
   "response": "5 + 3 * 2 = 16"
 }
 
-Output:
-
 {
   "correctness": "incorrect",
   "score": 0.2,
@@ -43,58 +41,4 @@ Output:
   "reasoning": ["BODMAS rule violated"]
 }
 
----
-
-API Endpoints
-Evaluate Response
-
-POST /evaluate
-
-Batch Evaluation
-
-POST /batch-evaluate
-
-Full Pipeline
-
-POST /pipeline
-
-**Tech Stack**
-Python
-FastAPI
-
-**How to Run**
-pip install fastapi uvicorn
-uvicorn app.main:app --reload
-
-**Purpose**
-
-This system simulates AI evaluation pipelines used in:
-
-Data annotation platforms
-AI model testing
-Quality assurance workflows
-
-## **System Design Philosophy**
-
-This platform is designed as a modular AI evaluation system inspired by real-world LLM evaluation pipelines.
-
-Key principles:
-- Separation of evaluation logic and API layer
-- Config-driven scoring system
-- Scalable pipeline architecture
-- Structured response formatting for downstream systems
-
-This mirrors production-level evaluation systems used in AI model benchmarking and quality assurance pipelines.
-Status
-
-Production-ready backend with evaluation, validation, and pipeline architecture
-
-## Benchmarking
-
-The platform supports dataset-level evaluation through benchmarking.
-
-- Runs evaluation across multiple samples  
-- Calculates average performance score  
-- Enables comparison of outputs  
-
-This simulates real-world AI evaluation workflows used in model testing.
+## API Endpoints
