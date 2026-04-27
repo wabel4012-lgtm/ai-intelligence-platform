@@ -42,7 +42,8 @@ Output:
   "confidence": "medium",
   "reasoning": ["BODMAS rule violated"]
 }
-🔧 API Endpoints
+
+API Endpoints
 Evaluate Response
 
 POST /evaluate
@@ -70,6 +71,18 @@ This system simulates AI evaluation pipelines used in:
 Data annotation platforms
 AI model testing
 Quality assurance workflows
+
+## System Design Philosophy
+
+This platform is designed as a modular AI evaluation system inspired by real-world LLM evaluation pipelines.
+
+Key principles:
+- Separation of evaluation logic and API layer
+- Config-driven scoring system
+- Scalable pipeline architecture
+- Structured response formatting for downstream systems
+
+This mirrors production-level evaluation systems used in AI model benchmarking and quality assurance pipelines.
 Status
 
 Production-ready backend with evaluation, validation, and pipeline architecture
