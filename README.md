@@ -45,22 +45,19 @@ This reflects real-world AI data pipelines used in production systems.
 ```
 ## API Endpoints
 
-Evaluate Response
-
+**Evaluate Response**
 POST /evaluate
 
-Batch Evaluation
-
+**Batch Evaluation**
 POST /batch-evaluate
 
-Full Pipeline
-
+**Full Pipeline**
 POST /pipeline
 
 ## Tech Stack
-Python
 
-FastAPI
+*Python
+*FastAPI
 
 ## How to Run
 ```bash
@@ -71,12 +68,9 @@ uvicorn app.main:app --reload
 ## Purpose
 
 This system simulates AI evaluation pipelines used in:
-
-Data annotation platforms
-
-AI model testing
-
-Quality assurance workflows
+-Data annotation platforms
+-AI model testing
+-Quality assurance workflows
 
 ## Status
 
