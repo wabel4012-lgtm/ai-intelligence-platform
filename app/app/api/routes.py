@@ -33,3 +33,8 @@ try:
     result = evaluate_response(response)
 except Exception as e:
     return {"error": str(e)}
+
+@router.post("/benchmark")
+def benchmark(data: list):
+    from app.services.benchmark_service import run_benchmark
+    return run_benchmark(data)
