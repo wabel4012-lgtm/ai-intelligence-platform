@@ -43,6 +43,8 @@ Output:
   "reasoning": ["BODMAS rule violated"]
 }
 
+---
+
 API Endpoints
 Evaluate Response
 
@@ -56,15 +58,15 @@ Full Pipeline
 
 POST /pipeline
 
-Tech Stack
+**Tech Stack**
 Python
 FastAPI
 
-How to Run
+**How to Run**
 pip install fastapi uvicorn
 uvicorn app.main:app --reload
 
-Purpose
+**Purpose**
 
 This system simulates AI evaluation pipelines used in:
 
@@ -72,7 +74,7 @@ Data annotation platforms
 AI model testing
 Quality assurance workflows
 
-## System Design Philosophy
+## **System Design Philosophy**
 
 This platform is designed as a modular AI evaluation system inspired by real-world LLM evaluation pipelines.
 
@@ -87,6 +89,12 @@ Status
 
 Production-ready backend with evaluation, validation, and pipeline architecture
 
+## Benchmarking
 
----
+The platform supports dataset-level evaluation through benchmarking.
 
+- Runs evaluation across multiple samples  
+- Calculates average performance score  
+- Enables comparison of outputs  
+
+This simulates real-world AI evaluation workflows used in model testing.
