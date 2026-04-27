@@ -60,6 +60,7 @@ FastAPI
 ```bash
 pip install fastapi uvicorn
 uvicorn app.main:app --reload
+```
 
 ## Purpose
 
